@@ -2,14 +2,15 @@
 
 def check_arr_rotations(a1,a2):
 
-
     if len(a1) != len(a2):
         return False
 
+    # get the index of the first element from array2
     index_0 = a2.index(a1[0])
     if index_0 == -1:
         return False
 
+    # From the index of the first element start iterating 
     current_position = index_0 + 1
     for i in range(1,len(a1)):
         if a1[i] == a2[current_position % len(a2)]:
